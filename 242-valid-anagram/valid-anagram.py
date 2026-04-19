@@ -1,3 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        return sorted(s) == sorted(t)
+        if sorted(tuple(s))==sorted(tuple(t)):
+            return True
+        else:
+            return False
