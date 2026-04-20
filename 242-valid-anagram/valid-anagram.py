@@ -6,13 +6,7 @@ class Solution:
         for i in s :
             dict1[i] = dict1.get(i,0)+1
         for j in t:
-            if j in dict1:
-                if dict1[j] == 0:
-                    return False
-                else:
-                    dict1[j]-=1
-            else:
+            if j not in dict1 or dict1[j] == 0:
                 return False
-                break
-        
+            dict1[j]-=1
         return True
